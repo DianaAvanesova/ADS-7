@@ -8,8 +8,7 @@ void Train::addCar(bool light) {
     first = newCar;
     newCar->next = newCar;
     newCar->prev = newCar;
-  }
-  else {
+  } else {
     Car* last = first->prev;
     last->next = newCar;
     newCar->prev = last;
@@ -36,8 +35,7 @@ int Train::getLength() {
     }
     if (!current->light) {
       return steps;
-    }
-    else {
+    } else {
       return getLength();
     }
   }
